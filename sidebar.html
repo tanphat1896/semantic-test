@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css"> -->
+    <!-- <script src="../../fw/jquery.js"></script> -->
+    <!-- <script src="../semantic/dist/semantic.min.js"></script> -->
+    <script type="text/javascript">
+    $(function() {
+        $('#link').click(function() {
+            $('.ui.sidebar').sidebar({
+                mobileTransition: 'overlay',
+                transition: 'overlay'
+            }).sidebar('toggle');
+        });
+    });
+    </script>
+</head>
+
+<body class="pushable">
+    <div class="ui right thin sidebar inverted vertical menu">
+        <a href="" class="item">Home <i class="home icon"></i></a>
+        <a href="" class="item">Contact <i class="phone icon"></i></a>
+        <a href="" class="item">About <i class="address card icon"></i></a>
+    </div>
+    <div class="pusher">
+        <nav class="ui fixed menu">
+            <div class="item">
+                <i class="code icon"></i>
+            </div>
+            <div class="right menu">
+                <a href="#" id="link" class="item"><i class="sidebar icon"></i></a>
+            </div>
+        </nav>
+        blabalbalabla
+    </div>
+</body>
+
+</html>
