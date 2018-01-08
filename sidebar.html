@@ -5,22 +5,38 @@
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="semantic.min.css">
     <!-- <script src="../../fw/jquery.js"></script> -->
-    <!-- <script src="../semantic/dist/semantic.min.js"></script> -->
+    <script src="semantic.min.js"></script>
     <script type="text/javascript">
     $(function() {
         $('#link').click(function() {
-            $('.ui.sidebar').sidebar({
+            $('.thin.ui.sidebar').sidebar({
                 mobileTransition: 'overlay',
                 transition: 'overlay'
             }).sidebar('toggle');
         });
     });
     </script>
+    <style type="text/css">
+    body {
+        min-height: 1000px;
+    }
+    
+    #top-jump {
+        z-index: 1000;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 5px;
+        background-color: rgb(250, 250, 250);
+        border: 1px solid rgb(50, 100, 200);
+        border-radius: 3px;
+    }
+    </style>
 </head>
 
 <body class="pushable">
@@ -29,17 +45,36 @@
         <a href="" class="item">Contact <i class="phone icon"></i></a>
         <a href="" class="item">About <i class="address card icon"></i></a>
     </div>
+    <div class="ui borderless inverted menu">
+        <a href="" class="item">Home <i class="home icon"></i></a>
+        <a href="" class="item">Contact <i class="phone icon"></i></a>
+        <a href="" class="item">About <i class="address card icon"></i></a>
+        <div class="right menu">
+            <a href="#" id="link" class="item"><i class="sidebar icon"></i></a>
+        </div>
+    </div>
     <div class="pusher">
-        <nav class="ui fixed menu">
+        <!--         <nav class="ui fixed menu">
             <div class="item">
                 <i class="code icon"></i>
             </div>
             <div class="right menu">
                 <a href="#" id="link" class="item"><i class="sidebar icon"></i></a>
             </div>
-        </nav>
+        </nav> -->
         blabalbalabla
+        <button class="ui blue raised button">Haha</button>
+
+        <div class="ui  segment">
+            blablabalabl
+        </div>
     </div>
+    <a href="#" title="Jump to top" id="top-jump">Top</a>
+    <script type="text/javascript">
+    $('#top-jump').click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+    });
+    </script>
 </body>
 
 </html>
